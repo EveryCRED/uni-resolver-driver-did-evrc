@@ -83,5 +83,5 @@ Browse  Redoc at: http://localhost:8080/redoc
     * Work in progress
  
 ## Contact us
-- Website-site: http://everycred.com/
+- Website-site: https://everycred.com/
 - Organization Website: https://viitorcloud.com/
