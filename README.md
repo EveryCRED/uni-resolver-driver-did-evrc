@@ -60,6 +60,14 @@ pip install "fastapi[all]"
 # Upgrade pip version
 python -m pip install --upgrade pip==22.1.2
 ```
+# 3. Docker
+```
+# Create docker image
+docker image build -t uni-resolver-driver-did-evrc .
+
+# Create docker container
+docker run -p 5001:8080 -d uni-resolver-driver-did-evrc
+```
 
 ## Run the server in development mode
 Run the server
@@ -73,3 +81,7 @@ Browse  Redoc at: http://localhost:8080/redoc
 
 * 1.0
     * Work in progress
+ 
+## Contact us
+- Website-site: http://everycred.com/
+- Organization Website: https://viitorcloud.com/
