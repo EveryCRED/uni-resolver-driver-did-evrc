@@ -61,6 +61,15 @@ pip install "fastapi[all]"
 python -m pip install --upgrade pip==22.1.2
 ```
 
+# 3. Docker
+```
+# Create docker image
+docker image build -t uni-resolver-driver-did-evrc .
+
+# Create docker container
+docker run -p 5001:8080 -d uni-resolver-driver-did-evrc
+```
+
 ## Run the server in development mode
 Run the server
 ```
