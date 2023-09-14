@@ -1,4 +1,25 @@
 # EveryCRED EVRC DID Method Driver
+EVERYCRED is an exceptionally adaptable platform for the issuance, viewing, and verification of credentials. Notably, this platform is structured around the fundamental concepts of DID (Decentralized Identifiers) and W3C Verifiable Credentials, embracing cutting-edge technology and gametics.
+
+### Issuer DID
+
+To represent organization as the issuer of credentials, we generates the following DID for each issuer:
+
+- DID: `did:evrc:issuer:{Blockchain Network}:{Unique ID}`
+- Description: This DID uniquely identifies issuers within the decentralized identity ecosystem.
+
+### Holder DID
+
+For each credential recipient, we assign a DID that represents them in our system. As an example, here's the holder's DID for Jane Doe:
+
+- DID: `did:evrc:holder:{Unique ID}`
+- Description: This DID is linked to Jane Doe and is used to associate her with the credentials issued by issuer.
+
+Please replace these example DIDs and descriptions with your actual DIDs and relevant information as needed and resolve the did.
+
+### Example DID's
+Issuer DID: did:evrc:issuer:ethereum:246d9b34-09e1-496e-ad5b-fb5ea889d96b
+Holder DID: did:evrc:holder:6c8ab8b9-daec-4e65-91de-5ac5019f69f2
 
 ## 🛠 Skills
 Python, Fast-API, Swagger Doc.
