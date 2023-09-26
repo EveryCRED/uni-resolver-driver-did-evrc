@@ -18,8 +18,8 @@ For each credential recipient, we assign a DID that represents them in our syste
 Please replace these example DIDs and descriptions with your actual DIDs and relevant information as needed and resolve the did.
 
 ### Example DID's
-Issuer DID: did:evrc:issuer:ethereum:246d9b34-09e1-496e-ad5b-fb5ea889d96b
-Holder DID: did:evrc:holder:6c8ab8b9-daec-4e65-91de-5ac5019f69f2
+- Issuer DID: did:evrc:issuer:ethereum:246d9b34-09e1-496e-ad5b-fb5ea889d96b
+- Holder DID: did:evrc:holder:6c8ab8b9-daec-4e65-91de-5ac5019f69f2
 
 ## 🛠 Skills
 Python, Fast-API, Swagger Doc.
@@ -60,6 +60,14 @@ pip install "fastapi[all]"
 # Upgrade pip version
 python -m pip install --upgrade pip==22.1.2
 ```
+# 3. Docker
+```
+# Create docker image
+docker image build -t uni-resolver-driver-did-evrc .
+
+# Create docker container
+docker run -p 5001:8080 -d uni-resolver-driver-did-evrc
+```
 
 # 3. Docker
 ```
@@ -82,3 +90,7 @@ Browse  Redoc at: http://localhost:8080/redoc
 
 * 1.0
     * Work in progress
+ 
+## Contact us
+- Website-site: https://everycred.com/
+- Organization Website: https://viitorcloud.com/
