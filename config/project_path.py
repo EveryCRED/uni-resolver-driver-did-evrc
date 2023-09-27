@@ -3,9 +3,6 @@ from os.path import abspath, basename, dirname, join
 
 # ##### PATH CONFIGURATION ################################
 
-# EVERYCRED API ROUTE
-EVERYCRED_API_ROUTE = "https://api.everycred.com"
-
 # fetch FastAPI's project directory
 BASE_DIR = dirname(dirname(abspath(__file__)))
 

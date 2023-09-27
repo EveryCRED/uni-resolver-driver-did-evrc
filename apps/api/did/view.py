@@ -14,7 +14,7 @@ async def get_did(identifier: str):
     to get the information of evrc identifier.
     """ 
     # API route
-    CRED_API_ROUTE = f'{env_config.EVERYCRED_API_ROUTE}/v1/identifier/did/{identifier}'
+    CRED_API_ROUTE = f'{env_config.EVERYCRED_API_ROUTE}/{identifier}'
     
     response = requests.get(CRED_API_ROUTE)
     identifier = json.loads(response.content.decode())
