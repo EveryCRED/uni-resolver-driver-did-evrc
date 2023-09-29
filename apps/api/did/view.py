@@ -20,11 +20,14 @@ async def get_did(identifier: str):
     identifier = json.loads(response.content.decode())
 
     if response.status_code == 400:
-        raise HTTPException(status_code=404, detail="Invalid Input")
+        return "Invalid Input"
     
     if response.status_code != 200:
-        raise HTTPException(status_code=500, detail="Error")
+        return "Invalid DID"
     
-    identifier_data = response.json().get('data')
+    if response.json()['status'] != 200:
+        return response.json()['message']
+    
+    identifier_data = response.json().get('data')['did_data']
 
-    return identifier_data, 200
+    return identifier_data
