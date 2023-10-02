@@ -19,15 +19,27 @@ async def get_did(identifier: str):
     response = requests.get(CRED_API_ROUTE)
     identifier = json.loads(response.content.decode())
 
+    # Error response of driver
+    error_response = {
+        "@context": "https://w3id.org/did-resolution/v1",
+        "didDocument": None,
+        "didResolutionMetadata": {
+            "error": "notFound",
+            "errorMessage": "404 Not Found",
+            "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {
+            
+        }
+    }
+
     if response.status_code == 400:
-        return "Invalid Input"
+        return error_response
     
     if response.status_code != 200:
-        return "Invalid DID"
+        return error_response
     
-    if response.json()['status'] != 200:
-        return response.json()['message']
-    
-    identifier_data = response.json().get('data')['did_data']
+    # If success then return did document
+    identifier_data = response.json().get('data')
 
     return identifier_data
